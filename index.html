@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rinqo — Never Miss a Call Again</title>
 <meta name="description" content="Rinqo answers your restaurant's phone 24/7 — handling reservations, menu questions, and takeout inquiries.">
+
+<!-- OpenGraph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rinqo.ai/">
+<meta property="og:title" content="Rinqo — Never Miss a Call Again">
+<meta property="og:description" content="AI phone answering for restaurants. 24/7 coverage for reservations, menu questions, and takeout — at a fraction of the cost of a receptionist.">
+<meta property="og:image" content="https://rinqo.ai/favicon.png">
+<meta property="og:site_name" content="Rinqo">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rinqo — Never Miss a Call Again">
+<meta name="twitter:description" content="AI phone answering for restaurants. 24/7 coverage for reservations, menu questions, and takeout — at a fraction of the cost of a receptionist.">
+<meta name="twitter:image" content="https://rinqo.ai/favicon.png">
+
+<meta name="theme-color" content="#00d296">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -61,7 +77,7 @@
   .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:120px 40px 80px; position:relative; overflow:hidden; }
   .hero-glow1 { position:absolute; top:-200px; right:-200px; width:700px; height:700px; background:radial-gradient(circle,rgba(0,210,150,0.07) 0%,transparent 70%); border-radius:50%; pointer-events:none; }
   .hero-glow2 { position:absolute; bottom:-100px; left:-200px; width:500px; height:500px; background:radial-gradient(circle,rgba(0,180,220,0.05) 0%,transparent 70%); border-radius:50%; pointer-events:none; }
-  .hero-inner { display:flex; gap:60px; align-items:center; max-width:1100px; width:100%; flex-wrap:wrap; justify-content:center; }
+  .hero-inner { display:flex; gap:60px; align-items:flex-start; max-width:1100px; width:100%; flex-wrap:wrap; justify-content:center; }
   .hero-left { flex:1 1 440px; max-width:540px; }
   .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,210,150,0.08); border:1px solid rgba(0,210,150,0.15); border-radius:50px; padding:6px 16px; margin-bottom:24px; font-size:12px; color:var(--accent); font-weight:500; letter-spacing:1px; }
   .hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); animation:pulse 2s infinite; }
@@ -138,6 +154,39 @@
   .comp-new .comp-detail { font-size:13px; color:rgba(0,210,150,0.75); line-height:1.8; }
   .comp-vs { display:flex; align-items:center; justify-content:center; border-left:1px solid var(--border); border-right:1px solid var(--border); padding:0 16px; }
   .vs-box { background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03)); border:1px solid rgba(255,255,255,0.12); border-radius:12px; width:52px; height:52px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:rgba(255,255,255,0.85); letter-spacing:2px; }
+
+  /* PRICING TIERS */
+  .tiers-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:1100px; margin:0 auto; }
+  .tier-card { background:var(--bg-card); border:1px solid var(--border); border-radius:20px; padding:36px 28px; position:relative; transition:transform 0.2s, border-color 0.2s; display:flex; flex-direction:column; }
+  .tier-card:hover { transform:translateY(-4px); }
+  .tier-card.featured { border-color:rgba(0,210,150,0.3); background:linear-gradient(180deg, rgba(0,210,150,0.05), rgba(0,180,220,0.02)); }
+  .tier-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent),var(--accent-blue)); color:#000; font-size:11px; font-weight:700; padding:5px 14px; border-radius:50px; letter-spacing:1px; }
+  .tier-name { font-size:12px; color:var(--accent); letter-spacing:3px; text-transform:uppercase; font-weight:600; margin-bottom:8px; }
+  .tier-for { font-size:12px; color:rgba(255,255,255,0.45); line-height:1.5; margin-bottom:20px; min-height:36px; }
+  .tier-price { display:flex; align-items:baseline; gap:4px; margin-bottom:4px; }
+  .tier-price-amount { font-size:44px; font-weight:800; letter-spacing:-1.5px; color:#fff; }
+  .tier-price-period { font-size:14px; color:rgba(255,255,255,0.5); font-weight:400; }
+  .tier-minutes { font-size:13px; color:rgba(255,255,255,0.55); margin-bottom:24px; font-weight:300; }
+  .tier-minutes strong { color:var(--accent); font-weight:600; }
+  .tier-features { list-style:none; padding:0; margin:0 0 28px 0; flex:1; }
+  .tier-features li { font-size:13.5px; color:rgba(255,255,255,0.75); padding:8px 0; display:flex; gap:10px; align-items:flex-start; line-height:1.5; }
+  .tier-check { color:var(--accent); flex-shrink:0; margin-top:2px; font-weight:700; }
+  .tier-cta { width:100%; padding:12px; border-radius:12px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit; transition:all 0.2s; background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.9); border:1px solid rgba(255,255,255,0.1); }
+  .tier-cta:hover { background:rgba(255,255,255,0.1); }
+  .tier-card.featured .tier-cta { background:linear-gradient(135deg,var(--accent),var(--accent-blue)); color:#000; border:none; font-weight:700; }
+  .tier-card.featured .tier-cta:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,210,150,0.2); }
+  .pricing-footnote { text-align:center; margin-top:32px; font-size:12px; color:rgba(255,255,255,0.4); }
+
+  /* FAQ */
+  .faq-list { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+  .faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; overflow:hidden; transition:border-color 0.2s; }
+  .faq-item[open] { border-color:rgba(0,210,150,0.2); }
+  .faq-item summary { padding:20px 24px; cursor:pointer; font-size:15px; font-weight:600; color:#fff; display:flex; justify-content:space-between; align-items:center; gap:16px; list-style:none; transition:color 0.2s; }
+  .faq-item summary::-webkit-details-marker { display:none; }
+  .faq-item summary:hover { color:var(--accent); }
+  .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(0,210,150,0.1); border:1px solid rgba(0,210,150,0.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, background 0.2s; color:var(--accent); font-size:14px; font-weight:700; }
+  .faq-item[open] .faq-icon { transform:rotate(45deg); background:linear-gradient(135deg,var(--accent),var(--accent-blue)); color:#000; border-color:transparent; }
+  .faq-answer { padding:0 24px 22px; font-size:14px; color:rgba(255,255,255,0.7); line-height:1.75; font-weight:300; }
 
   /* CTA */
   .cta-card { max-width:700px; margin:0 auto; background:linear-gradient(135deg,rgba(0,210,150,0.1),rgba(0,180,220,0.06)); border:1px solid rgba(0,210,150,0.15); border-radius:20px; padding:48px 44px; text-align:center; position:relative; overflow:hidden; }
@@ -216,6 +265,7 @@
     .comp-grid { grid-template-columns:1fr; }
     .comp-vs { padding:12px 0; border-left:none; border-right:none; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
     .hero-bottom { flex-direction:column; gap:16px; }
+    .tiers-grid { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -285,7 +335,7 @@
     <h2>Your phone is ringing. Nobody's picking up.</h2>
     <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:600px;margin:16px auto 0;font-weight:300">During rush hours, your staff can't answer every call. After hours, nobody's there at all. Every unanswered call is a customer who wanted to give you money — and couldn't.</p>
     <div class="stats-row">
-      <div class="stat-card"><div class="stat-num" data-count="60" data-suffix="%">0%</div><div class="stat-label">of calls missed
+      <div class="stat-card"><div class="stat-num" data-count="58" data-suffix="%">0%</div><div class="stat-label">of calls missed
 during rush hours</div></div>
       <div class="stat-card"><div class="stat-num" data-count="2000" data-prefix="$" data-suffix="+">$0+</div><div class="stat-label">lost revenue
 per month</div></div>
@@ -308,14 +358,15 @@ missed calls</div></div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="section">
+<!-- WHY RINQO -->
+<section class="section">
   <div class="reveal" style="max-width:700px;margin:0 auto">
-    <p class="section-label" style="text-align:center">The math</p>
-    <h2 style="text-align:center;margin-bottom:40px">75% less than an employee</h2>
+    <p class="section-label" style="text-align:center">Why Rinqo</p>
+    <h2 style="text-align:center;margin-bottom:14px">The math speaks for itself</h2>
+    <p style="text-align:center;font-size:16px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto 40px;font-weight:300">A part-time receptionist costs you $2,400/month and still misses calls. Rinqo never sleeps, never takes breaks, and costs a fraction of the price.</p>
     <div class="comp-grid">
       <div class="comp-col comp-old">
-        <div class="comp-title">Employee</div>
+        <div class="comp-title">Part-time receptionist</div>
         <div class="comp-price">$2,400/mo</div>
         <div class="comp-detail">$15/hr × 40 hrs/week<br>Calls in sick. Takes breaks.<br>Doesn't work after hours.</div>
       </div>
@@ -323,9 +374,125 @@ missed calls</div></div>
       <div class="comp-col comp-new">
         <div class="comp-title">Rinqo</div>
         <div class="comp-starting">Starting at</div>
-        <div class="comp-price">$597/mo</div>
-        <div class="comp-detail">75% less than an employee<br>Never calls in sick. No breaks.<br>Works every hour, every day.</div>
+        <div class="comp-price">$197/mo</div>
+        <div class="comp-detail">Up to 92% less than an employee<br>Never calls in sick. No breaks.<br>Works every hour, every day.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <div class="reveal" style="max-width:1100px;margin:0 auto">
+    <p class="section-label" style="text-align:center">Pricing</p>
+    <h2 style="text-align:center;margin-bottom:14px">Plans that scale with your restaurant</h2>
+    <p style="text-align:center;font-size:16px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto 48px;font-weight:300">Choose the tier that fits your operation. Upgrade or downgrade anytime — no long-term contract.</p>
+
+    <div class="tiers-grid">
+      <!-- STARTER -->
+      <div class="tier-card">
+        <div class="tier-name">Starter</div>
+        <div class="tier-for">For mom &amp; pop shops, cafes, takeout spots &amp; food trucks</div>
+        <div class="tier-price">
+          <span class="tier-price-amount">$197</span>
+          <span class="tier-price-period">/month</span>
+        </div>
+        <div class="tier-minutes"><strong>500 minutes</strong> included · $0.35/min after</div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> 24/7 AI voice agent</li>
+          <li><span class="tier-check">✓</span> Menu &amp; hours questions</li>
+          <li><span class="tier-check">✓</span> Takeout order capture</li>
+          <li><span class="tier-check">✓</span> Real-time SMS notifications</li>
+          <li><span class="tier-check">✓</span> Live call transfer to manager</li>
+          <li><span class="tier-check">✓</span> Dashboard with transcripts</li>
+          <li><span class="tier-check">✓</span> Email support</li>
+        </ul>
+        <button class="tier-cta" onclick="openForm()">Start Free Pilot</button>
+      </div>
+
+      <!-- PRO -->
+      <div class="tier-card featured">
+        <div class="tier-badge">MOST POPULAR</div>
+        <div class="tier-name">Pro</div>
+        <div class="tier-for">For busy sit-down restaurants &amp; fine dining</div>
+        <div class="tier-price">
+          <span class="tier-price-amount">$397</span>
+          <span class="tier-price-period">/month</span>
+        </div>
+        <div class="tier-minutes"><strong>1,200 minutes</strong> included · $0.30/min after</div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Everything in Starter</li>
+          <li><span class="tier-check">✓</span> Reservation booking (OpenTable, Resy)</li>
+          <li><span class="tier-check">✓</span> POS integration (Toast, Square, Clover)</li>
+          <li><span class="tier-check">✓</span> Real-time menu availability</li>
+          <li><span class="tier-check">✓</span> Repeat caller recognition</li>
+          <li><span class="tier-check">✓</span> Advanced analytics dashboard</li>
+          <li><span class="tier-check">✓</span> Weekly performance reports</li>
+          <li><span class="tier-check">✓</span> Priority support</li>
+        </ul>
+        <button class="tier-cta" onclick="openForm()">Start Free Pilot</button>
+      </div>
+
+      <!-- ULTRA -->
+      <div class="tier-card">
+        <div class="tier-name">Ultra</div>
+        <div class="tier-for">For multi-location restaurant groups &amp; small chains</div>
+        <div class="tier-price">
+          <span class="tier-price-amount">$797</span>
+          <span class="tier-price-period">/month</span>
+        </div>
+        <div class="tier-minutes"><strong>3,500 minutes</strong> pooled · $0.25/min after</div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Everything in Pro</li>
+          <li><span class="tier-check">✓</span> Up to 3 locations included</li>
+          <li><span class="tier-check">✓</span> Centralized multi-location dashboard</li>
+          <li><span class="tier-check">✓</span> Location-specific call routing</li>
+          <li><span class="tier-check">✓</span> Group-level analytics</li>
+          <li><span class="tier-check">✓</span> Additional locations: $297/mo each</li>
+        </ul>
+        <button class="tier-cta" onclick="openForm()">Start Free Pilot</button>
+      </div>
+    </div>
+
+    <p class="pricing-footnote">All plans include: 7-day free pilot · 30-day money-back guarantee · Cancel anytime</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="reveal" style="max-width:720px;margin:0 auto">
+    <p class="section-label" style="text-align:center">FAQ</p>
+    <h2 style="text-align:center;margin-bottom:40px">Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Does it sound robotic or like a real human?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Rinqo uses the latest voice AI technology with natural speech patterns, pauses, and tone. Most callers can't tell they're speaking with an AI. During your free pilot, we'll give you a demo call so you can hear exactly how it sounds.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if the agent can't answer a question?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">If a caller asks something the agent doesn't know, it offers to transfer them to your manager or take a message. You'll get a text notification with the caller's number and the question so you can follow up. No customer is ever left hanging.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need new hardware or a new phone line?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Nope. Rinqo works with your existing phone number. We set up call forwarding so when you're busy, closed, or don't pick up within a few rings, the call routes to your Rinqo agent automatically. No new equipment, no downtime.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long does setup take?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Most restaurants are live within 24 hours. We take one meeting to learn your menu, hours, reservation rules, and common questions — then we build and test your agent the same day. You start your 7-day free pilot immediately after.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I cancel anytime?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Yes. There's no contract, no cancellation fee. If Rinqo isn't working for you, simply cancel and we'll disconnect your agent. We also offer a 30-day money-back guarantee on your first payment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if my menu, hours, or specials change?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">For Pro and Ultra plans, your menu, prices, and availability sync automatically in real time through our POS integration (Toast, Square, Clover, and more) — so changes reflect instantly with no action from you. For Starter plans or legacy POS systems, just email or text us the changes and we'll update your agent within a few hours.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -650,4 +817,3 @@ function closePrivacy() {
 </script>
 </body>
 </html>
-
